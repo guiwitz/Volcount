@@ -1,0 +1,16 @@
+name: jovanovic
+channels:
+  - conda-forge
+dependencies:
+  - scipy
+  - numpy
+  - matplotlib
+  - pandas
+  - scikit-image
+  - jupyter
+  - ipywidgets
+  - ipyvolume
+  - pip
+  - voila
+  - pip:
+    - git+https://github.com/guiwitz/Volcount.git@master#egg=volcount&subdirectory=volcount
