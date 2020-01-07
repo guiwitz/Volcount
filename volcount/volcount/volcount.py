@@ -96,7 +96,7 @@ class Improc:
             display(ipv.figure())        
         
         my_adress = next(list_running_servers())['base_url']
-        self.myHTML = ipw.HTML("""<a href="https://hub.gke.mybinder.org"""+my_adress+"""notebooks/to_download.tar.gz" target="_blank"><b>5. Hit this link to download your data<b></a>""")
+        #self.myHTML = ipw.HTML("""<a href="https://hub.gke.mybinder.org"""+my_adress+"""notebooks/to_download.tar.gz" target="_blank"><b>5. Hit this link to download your data<b></a>""")
 
      
     def on_scale_change(self,b):

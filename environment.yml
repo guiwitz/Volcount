@@ -13,4 +13,4 @@ dependencies:
   - pip
   - voila
   - pip:
-    - git+https://github.com/guiwitz/Volcount.git@master#egg=volcount&subdirectory=volcount
+    - git+https://github.com/guiwitz/Volcount.git@master#egg=volcount\&subdirectory=volcount
