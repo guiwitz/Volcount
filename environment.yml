@@ -1,4 +1,4 @@
-name: jovanovic
+name: volcount
 channels:
   - conda-forge
 dependencies:
