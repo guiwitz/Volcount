@@ -13,6 +13,9 @@ class Folders:
     
     def __init__(self, rows = 10):
         
+        style = {'description_width': 'initial'}
+        layout = {'width': '300px'}
+        
         self.cur_dir = Path('.').resolve()
         self.out = ipw.Output()
         
@@ -21,7 +24,7 @@ class Folders:
         self.file_list.value = ()
         self.file_list.observe(self.move_folders, names='value')
         
-        self.refresh_button = ipw.Button(description = 'Refresh folder content')
+        self.refresh_button = ipw.Button(description = 'Refresh folder content', style = style, layout = layout)
         self.refresh_button.on_click(self.refresh)
         
      

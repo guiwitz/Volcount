@@ -80,10 +80,10 @@ class Improc:
         self.process_button = ipw.Button(description = 'Process selected files', style = style, layout = layout)
         self.process_button.on_click(self.do_processing)
         
-        self.zip_button = ipw.Button(description = 'Zip results')
+        self.zip_button = ipw.Button(description = 'Zip results', style = style, layout = layout)
         self.zip_button.on_click(self.do_zipping)
         
-        self.scalingfactor = ipw.Text('1', description = 'xy vs. z scaling')
+        self.scalingfactor = ipw.Text('1', description = 'xy vs. z scaling', style = style, layout = layout)
         
         self.update_button = ipw.Button(description = 'Update visualization',style = style, layout = layout)
         self.update_button.on_click(self.on_select_to_plot)
