@@ -183,7 +183,7 @@ class Improc:
                 skimage.io.imsave(self.folders.cur_dir.as_posix()+'/'+os.path.splitext(f)[0]+'_label.tif', synapse_label.astype(np.uint16))
                 skimage.io.imsave(self.folders.cur_dir.as_posix()+'/'+os.path.splitext(f)[0]+'_region.tif', synapse_region.astype(np.uint16))
         
-        pd.DataFrame(self.density).to_csv(self.folders.cur_dir.as_posix()+'/summary.csv')
+        pd.DataFrame(self.density).to_csv(self.folders.cur_dir.as_posix()+'/summary.csv',index=False)
         
         self.process_button.description = 'Done! Click to process again'
         
@@ -193,7 +193,7 @@ class Improc:
         
         self.zip_button.description = 'Currently zipping...'
         #save the summary file
-        pd.DataFrame(self.density).to_csv(self.folders.cur_dir.as_posix()+'/summary.csv')
+        pd.DataFrame(self.density).to_csv(self.folders.cur_dir.as_posix()+'/summary.csv',index=False)
         
         subprocess.call(['tar', '-czf', 'to_download.tar.gz','-C', self.folders.cur_dir.as_posix(),'.'])
         subprocess.call(['tar', '-czf', 'to_download.tar.gz','-C', self.folders.cur_dir.parent.as_posix(), self.folders.cur_dir.name])
