@@ -29,7 +29,7 @@ from .folders import Folders
     
 class Improc:
     
-    def __init__(self, folder_name = 'upload_data'):
+    def __init__(self):
 
         """Standard __init__ method.
         
@@ -77,16 +77,13 @@ class Improc:
         
         self.folders = Folders(rows = 15)
         
-        self.process_button = ipw.Button(description = 'Click to process', style = style, layout = layout)
+        self.process_button = ipw.Button(description = 'Process selected files', style = style, layout = layout)
         self.process_button.on_click(self.do_processing)
         
-        self.zip_button = ipw.Button(description = 'Click to zip data')
+        self.zip_button = ipw.Button(description = 'Zip results')
         self.zip_button.on_click(self.do_zipping)
         
-        self.plot_button = ipw.Button(description = 'Click to plot', style = style, layout = layout)
-        self.plot_button.on_click(self.on_select_to_plot)
-        
-        self.scalingfactor = ipw.Text('1', description = 'z scaling')
+        self.scalingfactor = ipw.Text('1', description = 'xy vs. z scaling')
         
         self.update_button = ipw.Button(description = 'Update visualization',style = style, layout = layout)
         self.update_button.on_click(self.on_select_to_plot)

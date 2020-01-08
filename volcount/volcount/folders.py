@@ -21,7 +21,7 @@ class Folders:
         self.file_list.value = ()
         self.file_list.observe(self.move_folders, names='value')
         
-        self.refresh_button = ipw.Button(description = 'Refresh')
+        self.refresh_button = ipw.Button(description = 'Refresh folder content')
         self.refresh_button.on_click(self.refresh)
         
      
